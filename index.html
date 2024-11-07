@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Seguro - Tienda de Juegos Retro Digitales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pago Seguro</h1>
+        <form id="payment-form">
+            <div class="input-wrapper">
+                <label for="card-number">Número de Tarjeta</label>
+                <input type="text" id="card-number" required maxlength="19" placeholder="1234 5678 9012 3456">
+                <span class="card-icon">💳</span>
+            </div>
+            
+            <div class="input-wrapper">
+                <label for="card-name">Nombre en la Tarjeta</label>
+                <input type="text" id="card-name" required placeholder="Juan Pérez">
+            </div>
+            
+            <div class="expiry-cvv-wrapper">
+                <div class="input-wrapper">
+                    <label for="expiry-date">Fecha de Expiración</label>
+                    <input type="text" id="expiry-date" required maxlength="5" placeholder="MM/YY">
+                </div>
+                
+                <div class="input-wrapper">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" required maxlength="4" placeholder="123">
+                </div>
+            </div>
+            
+            <button type="submit">Finalizar Compra</button>
+        </form>
+    </div>
+
+    <div class="modal" id="thank-you-modal">
+        <div class="modal-content">
+            <h2>¡Gracias por su compra!</h2>
+            <p>Su pago ha sido procesado exitosamente.</p>
+            <button id="close-modal">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
